@@ -1,0 +1,6 @@
+{
+  "model": "naive_bayes",
+  "seed": 67,
+  "horizon_days": 45,
+  "selection": "validation only"
+}
