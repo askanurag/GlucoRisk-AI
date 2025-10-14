@@ -1,0 +1,6 @@
+{
+  "model": "random_forest",
+  "seed": 23,
+  "horizon_days": 14,
+  "selection": "validation only"
+}
