@@ -1,0 +1,45 @@
+{
+  "patient_id": "Unique synthetic group identifier; never used as predictor",
+  "target": {
+    "name": "simulated_risk_class",
+    "meaning": "Bernoulli label sampled from documented simulator, not a confirmed clinical endpoint"
+  },
+  "features": [
+    {
+      "name": "age",
+      "unit": "years (simulated)",
+      "source": "Gaussian mathematical simulator",
+      "missing": "NaN allowed if column not entirely missing"
+    },
+    {
+      "name": "bmi",
+      "unit": "kg/m\u00b2 (simulated)",
+      "source": "Gaussian mathematical simulator",
+      "missing": "NaN allowed if column not entirely missing"
+    },
+    {
+      "name": "glucose",
+      "unit": "mg/dL (simulated)",
+      "source": "Gaussian mathematical simulator",
+      "missing": "NaN allowed if column not entirely missing"
+    },
+    {
+      "name": "activity_minutes",
+      "unit": "minutes/day (simulated)",
+      "source": "Gaussian mathematical simulator",
+      "missing": "NaN allowed if column not entirely missing"
+    },
+    {
+      "name": "family_history",
+      "unit": "continuous proxy, not binary",
+      "source": "Gaussian mathematical simulator",
+      "missing": "NaN allowed if column not entirely missing"
+    },
+    {
+      "name": "sleep_hours",
+      "unit": "hours (simulated)",
+      "source": "Gaussian mathematical simulator",
+      "missing": "NaN allowed if column not entirely missing"
+    }
+  ]
+}
