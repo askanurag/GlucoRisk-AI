@@ -1,0 +1,7 @@
+# Synthetic patient registry
+
+800 CSV shards contain 800 unique simulated patients and six discharge encounters each (4,800 encounters). Every file is consumed by `registry_loading.load_registry`. Records are distinct seeded simulations rather than copies or placeholder files. Identifiers begin REG-SYN; sites SIM-A/B/C are fictional.
+
+Fields include patient and encounter IDs, fictional site, admission/discharge/feature-availability timestamps, observation end, a simulated return timestamp and six numeric features. `followup_delay` is a planned delay known at discharge. Follow-up extends 75 days; horizon scenarios use 7, 14, 30 or 45 days. Returns are generated with probability sigmoid(-3 + 0.35*prior_admissions + 0.42*comorbidity_count + 0.04*followup_delay + 0.012*(age-50)); their delays are uniform integer days 1–60. These records do not represent clinical evidence.
+
+`registry_simulator.make_patient(number)` regenerates each shard deterministically. The loader caches a validated in-process snapshot keyed by path, modification time and size; use reload=True to refresh explicitly. Derived exports and fitted weights are written to outputs/ and are not distributed. Predictors exclude labels, return times and site/encounter identifiers. Entire patients remain within one partition. Temporal evaluation additionally purges training records after its cutoff. Reported performance is educational and not validated for real patients.
