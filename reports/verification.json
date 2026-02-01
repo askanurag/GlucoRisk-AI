@@ -1,0 +1,15 @@
+{
+  "project": "GlucoRisk_AI",
+  "files": 280,
+  "python_files": 108,
+  "notebooks": 50,
+  "unit_tests_passed": 44,
+  "tabular_experiments_run": 30,
+  "domain_scenarios_run": 12,
+  "domain_source_files": 10,
+  "domain_patients": 10,
+  "domain_rows": 80,
+  "domain_unit": "hours",
+  "notebook_execution": "Sequential Python cell execution with captured stdout and rendered figures; not a Jupyter kernel",
+  "clinical_validation": false
+}
