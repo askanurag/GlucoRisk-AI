@@ -1,0 +1,5 @@
+import json
+SPEC = json.loads('{"slug": "GlucoRisk_AI", "title": "GlucoRisk AI", "task": "Synthetic diabetes risk modelling", "features": ["age", "bmi", "glucose", "activity_minutes", "family_history", "sleep_hours"], "means": [45, 27, 105, 35, 0.4, 7], "scales": [14, 5, 22, 18, 0.49, 1.1], "weights": [0.35, 0.7, 1.1, -0.45, 0.5, -0.2], "label": "simulated_risk_class", "domain": "metabolic", "description": "Study tabular risk modelling, missing data, calibration and subgroup performance using entirely simulated metabolic records.", "target": "simulated_risk_class", "provenance": "synthetic mathematical simulator; not real clinical data"}')
+FEATURES = SPEC["features"]
+TARGET = SPEC["target"]
+SEED = 42
